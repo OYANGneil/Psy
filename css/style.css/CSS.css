@@ -1,0 +1,174 @@
+:root {
+  --primary: #3a6ea5;
+  --secondary: #2f4f6f;
+  --light: #f4f7f9;
+  --dark: #1e1e1e;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--light);
+  color: #333;
+  transition: 0.4s;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  color: white;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#darkModeBtn {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #adcbe3, #dbe9f4);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--secondary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+/* SERVICES */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* ABOUT & CONTACT */
+.about, .contact, .appointment {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* DARK MODE */
+.dark {
+  background: var(--dark);
+  color: white;
+}
+
+.dark .card {
+  background: #2c2c2c;
+}
+
+.dark header {
+  background: #111;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--primary);
+    flex-direction: column;
+    display: none;
+    width: 200px;
+    padding: 20px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
